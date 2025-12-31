@@ -1,0 +1,53 @@
+{
+    "status": true,
+    "message": "Blog Fetch Success",
+    "data": {
+        "result": [
+            {
+                "id": "1",
+                "title": "Wildlife Conservation in the Amazon",
+                "content": "The Amazon rainforest is home to an incredible diversity of wildlife...",
+                "excerpt": "Exploring the rich biodiversity of the Amazon rainforest and conservation efforts.",
+                "image": "/test-images/amazon-wildlife.jpg",
+                "banner": "/test-images/amazon-banner.jpg",
+                "featured": true,
+                "feature_place": 1,
+                "status": true,
+                "type": "blog",
+                "createdAt": "2024-01-15T10:00:00Z",
+                "updatedAt": "2024-01-15T10:00:00Z"
+            },
+            {
+                "id": "2",
+                "title": "Protecting Endangered Species",
+                "content": "Many species around the world are facing extinction due to habitat loss...",
+                "excerpt": "Understanding the challenges facing endangered species and how we can help.",
+                "image": "/test-images/endangered-species.jpg",
+                "banner": "/test-images/endangered-banner.jpg",
+                "featured": false,
+                "feature_place": 0,
+                "status": true,
+                "type": "blog",
+                "createdAt": "2024-01-14T09:30:00Z",
+                "updatedAt": "2024-01-14T09:30:00Z"
+            },
+            {
+                "id": "3",
+                "title": "Ocean Conservation Efforts",
+                "content": "Our oceans are under threat from pollution, overfishing, and climate change...",
+                "excerpt": "Examining global efforts to protect our marine ecosystems.",
+                "image": "/test-images/ocean-conservation.jpg",
+                "banner": "/test-images/ocean-banner.jpg",
+                "featured": true,
+                "feature_place": 2,
+                "status": true,
+                "type": "blog",
+                "createdAt": "2024-01-13T14:15:00Z",
+                "updatedAt": "2024-01-13T14:15:00Z"
+            }
+        ],
+        "totalPages": 1,
+        "currentPage": 1,
+        "limit": 3
+    }
+}

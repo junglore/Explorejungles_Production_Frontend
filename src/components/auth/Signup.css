@@ -1,0 +1,13 @@
+/* Import shared auth styles from Login.css */
+@import './Login.css';
+
+/* Signup-specific overrides if needed */
+/* Ensure signup form is also scrollable on larger screens */
+@media (min-width: 1025px) {
+    .auth-right {
+        overflow-y: auto;
+        max-height: 100vh;
+        width: 40%;
+        margin-left: 60%;
+    }
+}

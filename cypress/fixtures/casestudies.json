@@ -1,0 +1,33 @@
+{
+    "status": true,
+    "message": "Case Studies Fetch Success",
+    "data": {
+        "result": [
+            {
+                "id": "1",
+                "title": "Yellowstone Wolf Reintroduction",
+                "content": "The reintroduction of wolves to Yellowstone National Park has been one of the most successful conservation stories...",
+                "excerpt": "How wolves transformed the Yellowstone ecosystem.",
+                "image": "/test-images/yellowstone-wolves.jpg",
+                "status": true,
+                "type": "case_study",
+                "createdAt": "2024-01-12T11:00:00Z",
+                "updatedAt": "2024-01-12T11:00:00Z"
+            },
+            {
+                "id": "2",
+                "title": "Giant Panda Conservation Success",
+                "content": "The giant panda conservation program in China has shown remarkable results...",
+                "excerpt": "From endangered to vulnerable: the panda success story.",
+                "image": "/test-images/giant-pandas.jpg",
+                "status": true,
+                "type": "case_study",
+                "createdAt": "2024-01-11T16:20:00Z",
+                "updatedAt": "2024-01-11T16:20:00Z"
+            }
+        ],
+        "totalPages": 1,
+        "currentPage": 1,
+        "limit": 2
+    }
+}

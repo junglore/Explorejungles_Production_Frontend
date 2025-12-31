@@ -1,0 +1,806 @@
+/* Rewards Profile Styles */
+.rewards-profile {
+    background: var(--color-surface, #ffffff);
+    border-radius: 12px;
+    border: 1px solid var(--color-border, #e0e0e0);
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.rewards-profile:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Compact View */
+.rewards-profile--compact {
+    padding: 16px;
+}
+
+.rewards-profile--compact .rewards-profile__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rewards-profile--compact .rewards-profile__avatar {
+    width: 48px;
+    height: 48px;
+    position: relative;
+}
+
+.rewards-profile--compact .rewards-profile__avatar-image,
+.rewards-profile--compact .rewards-profile__avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.rewards-profile--compact .rewards-profile__avatar-placeholder {
+    background: linear-gradient(135deg, var(--color-primary, #2196f3) 0%, #1976d2 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.rewards-profile--compact .rewards-profile__info {
+    flex: 1;
+    min-width: 0;
+}
+
+.rewards-profile--compact .rewards-profile__username {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text-primary, #333333);
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+}
+
+.rewards-profile--compact .rewards-profile__tier-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-secondary, #666666);
+}
+
+.rewards-profile--compact .rewards-profile__tier-icon {
+    font-size: 16px;
+}
+
+.rewards-profile--compact .rewards-profile__balance {
+    flex-shrink: 0;
+}
+
+/* Detailed View */
+.rewards-profile--detailed {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+}
+
+/* Header Section */
+.rewards-profile__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    position: relative;
+}
+
+.rewards-profile__avatar {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.rewards-profile__avatar-image,
+.rewards-profile__avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+}
+
+.rewards-profile__avatar-placeholder {
+    background: linear-gradient(135deg, var(--color-primary, #2196f3) 0%, #1976d2 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.rewards-profile__tier-badge {
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: white;
+    border: 2px solid var(--color-border, #e0e0e0);
+    border-radius: 20px;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rewards-profile__tier-icon {
+    font-size: 14px;
+}
+
+.rewards-profile__tier-name {
+    color: var(--color-text-primary, #333333);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.rewards-profile__info {
+    flex: 1;
+    min-width: 0;
+}
+
+.rewards-profile__username {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-text-primary, #333333);
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+}
+
+.rewards-profile__join-date {
+    font-size: 14px;
+    color: var(--color-text-secondary, #666666);
+    margin: 0 0 16px 0;
+}
+
+.rewards-profile__balance-section {
+    margin-top: 12px;
+}
+
+.rewards-profile__refresh {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    background: white;
+    border: 1px solid var(--color-border, #e0e0e0);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-secondary, #666666);
+    transition: all 0.2s ease;
+}
+
+.rewards-profile__refresh:hover {
+    background: var(--color-surface-hover, #f5f5f5);
+    border-color: var(--color-primary, #2196f3);
+    color: var(--color-primary, #2196f3);
+}
+
+.rewards-profile__refresh svg {
+    width: 18px;
+    height: 18px;
+}
+
+.rewards-profile__refresh:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Tier Progress */
+.rewards-profile__tier-progress {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(33, 150, 243, 0.2);
+}
+
+.rewards-profile__tier-progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.rewards-profile__tier-progress h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text-primary, #333333);
+    margin: 0;
+}
+
+.rewards-profile__tier-next {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-primary, #2196f3);
+}
+
+.rewards-profile__tier-max {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4caf50;
+    background: rgba(76, 175, 80, 0.1);
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+.rewards-profile__progress-bar {
+    position: relative;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(33, 150, 243, 0.3);
+}
+
+.rewards-profile__progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary, #2196f3) 0%, #1976d2 100%);
+    transition: width 0.6s ease;
+    border-radius: 12px;
+}
+
+.rewards-profile__progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-primary, #333333);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Statistics */
+.rewards-profile__stats {
+    background: var(--color-surface-secondary, #f8f9fa);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.rewards-profile__stats h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text-primary, #333333);
+    margin: 0 0 16px 0;
+}
+
+.rewards-profile__stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+}
+
+.rewards-profile__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid var(--color-border, #e0e0e0);
+    transition: all 0.2s ease;
+}
+
+.rewards-profile__stat:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.rewards-profile__stat-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.rewards-profile__stat-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text-primary, #333333);
+    margin-bottom: 4px;
+}
+
+.rewards-profile__stat-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-text-secondary, #666666);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Achievements */
+.rewards-profile__achievements {
+    background: var(--color-surface-secondary, #f8f9fa);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.rewards-profile__achievements-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.rewards-profile__achievements h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text-primary, #333333);
+    margin: 0;
+}
+
+.rewards-profile__achievements-count {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-primary, #2196f3);
+    background: rgba(33, 150, 243, 0.1);
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+
+.rewards-profile__achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+}
+
+.rewards-profile__achievement {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid var(--color-border, #e0e0e0);
+    transition: all 0.2s ease;
+    position: relative;
+    opacity: 0.6;
+}
+
+.rewards-profile__achievement--earned {
+    opacity: 1;
+    border-color: #4caf50;
+    background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e8 100%);
+}
+
+.rewards-profile__achievement:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rewards-profile__achievement-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.rewards-profile__achievement-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.rewards-profile__achievement-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text-primary, #333333);
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+}
+
+.rewards-profile__achievement-description {
+    font-size: 12px;
+    color: var(--color-text-secondary, #666666);
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+}
+
+.rewards-profile__achievement-date {
+    font-size: 11px;
+    color: #4caf50;
+    font-weight: 500;
+}
+
+.rewards-profile__achievement-checkmark {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 16px;
+    color: #4caf50;
+    background: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #4caf50;
+}
+
+.rewards-profile__achievements-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.rewards-profile__achievements-empty-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.rewards-profile__achievements-empty p {
+    font-size: 14px;
+    color: var(--color-text-secondary, #666666);
+    margin: 0;
+}
+
+/* Recent Transactions */
+.rewards-profile__transactions {
+    background: var(--color-surface-secondary, #f8f9fa);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.rewards-profile__transactions h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text-primary, #333333);
+    margin: 0 0 16px 0;
+}
+
+.rewards-profile__transactions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rewards-profile__transaction {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid var(--color-border, #e0e0e0);
+    transition: all 0.2s ease;
+}
+
+.rewards-profile__transaction:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rewards-profile__transaction-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.rewards-profile__transaction-type {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text-primary, #333333);
+    margin-bottom: 2px;
+    text-transform: capitalize;
+}
+
+.rewards-profile__transaction-description {
+    display: block;
+    font-size: 12px;
+    color: var(--color-text-secondary, #666666);
+    line-height: 1.3;
+}
+
+.rewards-profile__transaction-amount {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: right;
+}
+
+.rewards-profile__transaction-points,
+.rewards-profile__transaction-credits {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.rewards-profile__transaction-points.positive,
+.rewards-profile__transaction-credits.positive {
+    color: #4caf50;
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.rewards-profile__transaction-points.negative,
+.rewards-profile__transaction-credits.negative {
+    color: #f44336;
+    background: rgba(244, 67, 54, 0.1);
+}
+
+.rewards-profile__transaction-date {
+    font-size: 11px;
+    color: var(--color-text-secondary, #666666);
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+/* Loading States */
+.rewards-profile__loading {
+    padding: 20px;
+}
+
+.rewards-profile__skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.rewards-profile__skeleton--compact {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.rewards-profile__skeleton-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+.rewards-profile__skeleton-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rewards-profile__skeleton-name {
+    height: 20px;
+    width: 120px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+}
+
+.rewards-profile__skeleton-tier {
+    height: 16px;
+    width: 80px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+}
+
+.rewards-profile__skeleton-header {
+    height: 100px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 12px;
+}
+
+.rewards-profile__skeleton-stats {
+    height: 120px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 12px;
+}
+
+.rewards-profile__skeleton-progress {
+    height: 80px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 12px;
+}
+
+.rewards-profile__achievements-loading {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+}
+
+.rewards-profile__achievement-skeleton {
+    height: 80px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 8px;
+}
+
+/* Auth Required */
+.rewards-profile__auth-required {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    min-height: 200px;
+}
+
+.rewards-profile__auth-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.7;
+}
+
+.rewards-profile__auth-required h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text-primary, #333333);
+    margin: 0 0 8px 0;
+}
+
+.rewards-profile__auth-required p {
+    font-size: 14px;
+    color: var(--color-text-secondary, #666666);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Animations */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .rewards-profile--detailed {
+        padding: 16px;
+        gap: 20px;
+    }
+    
+    .rewards-profile__header {
+        flex-direction: column;
+        text-align: center;
+        padding: 16px;
+        gap: 16px;
+    }
+    
+    .rewards-profile__avatar {
+        align-self: center;
+    }
+    
+    .rewards-profile__refresh {
+        position: static;
+        align-self: flex-end;
+    }
+    
+    .rewards-profile__stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .rewards-profile__achievements-grid,
+    .rewards-profile__achievements-loading {
+        grid-template-columns: 1fr;
+    }
+    
+    .rewards-profile__transaction {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .rewards-profile__transaction-amount {
+        align-self: flex-end;
+        text-align: right;
+    }
+    
+    .rewards-profile__tier-progress-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rewards-profile--compact .rewards-profile__header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+    }
+    
+    .rewards-profile--compact .rewards-profile__balance {
+        align-self: center;
+    }
+    
+    .rewards-profile__stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .rewards-profile__achievement {
+        flex-direction: column;
+        text-align: center;
+        padding: 16px;
+    }
+    
+    .rewards-profile__achievement-checkmark {
+        position: static;
+        margin-top: 8px;
+    }
+}
+
+/* Dark Theme Support */
+@media (prefers-color-scheme: dark) {
+    .rewards-profile {
+        background: var(--color-surface-dark, #1e1e1e);
+        border-color: var(--color-border-dark, #333333);
+    }
+    
+    .rewards-profile__header,
+    .rewards-profile__stats,
+    .rewards-profile__achievements,
+    .rewards-profile__transactions,
+    .rewards-profile__tier-progress {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .rewards-profile__stat,
+    .rewards-profile__achievement,
+    .rewards-profile__transaction {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .rewards-profile__skeleton-avatar,
+    .rewards-profile__skeleton-name,
+    .rewards-profile__skeleton-tier,
+    .rewards-profile__skeleton-header,
+    .rewards-profile__skeleton-stats,
+    .rewards-profile__skeleton-progress,
+    .rewards-profile__achievement-skeleton {
+        background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+        background-size: 200% 100%;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .rewards-profile__stat:hover,
+    .rewards-profile__achievement:hover,
+    .rewards-profile__transaction:hover {
+        transform: none;
+    }
+    
+    .rewards-profile__skeleton-avatar,
+    .rewards-profile__skeleton-name,
+    .rewards-profile__skeleton-tier,
+    .rewards-profile__skeleton-header,
+    .rewards-profile__skeleton-stats,
+    .rewards-profile__skeleton-progress,
+    .rewards-profile__achievement-skeleton {
+        animation: none;
+        background: #e0e0e0;
+    }
+    
+    .rewards-profile__progress-fill {
+        transition: none;
+    }
+}

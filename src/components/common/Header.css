@@ -1,0 +1,232 @@
+/* Header Styles */
+.header {
+    background-color: #2d5a3d;
+    color: white;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 60px;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+.logo:hover {
+    color: #a8d5ba;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex: 1;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #a8d5ba;
+}
+
+/* Search Form */
+.search-form {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 20px;
+}
+
+.search-input {
+    padding: 8px 40px 8px 12px;
+    border: 1px solid #4a7c59;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 14px;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #a8d5ba;
+}
+
+.search-icon {
+    position: absolute;
+    right: 12px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+    opacity: 0.7;
+}
+
+/* Authentication Section */
+.auth-section {
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #4a7c59;
+}
+
+.logout-button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #4a7c59;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #4a7c59;
+}
+
+.login-button {
+    background-color: #4a7c59;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #3d6b4a;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-button {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 3px;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #2d5a3d;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #4a7c59;
+    font-weight: 500;
+}
+
+.mobile-menu a:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu a:hover {
+    color: #a8d5ba;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 15px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    .search-form {
+        margin: 0 10px;
+    }
+
+    .search-input {
+        width: 150px;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        height: 50px;
+    }
+
+    .search-input {
+        width: 120px;
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+
+    .user-info span {
+        display: none;
+    }
+}

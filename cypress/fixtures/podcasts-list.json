@@ -1,0 +1,70 @@
+[
+    {
+        "id": "podcast-1",
+        "title": "Wildlife Safari Adventures",
+        "description": "Join us on an incredible journey through the African savanna as we explore the magnificent wildlife and their natural habitats.",
+        "file_url": "http://localhost:8000/uploads/audio/wildlife-safari.mp3",
+        "thumbnail_url": "http://localhost:8000/uploads/images/wildlife-safari-thumb.jpg",
+        "photographer": "David Attenborough",
+        "national_park": "Wildlife Explorer",
+        "duration": 2400,
+        "file_size": 30000000,
+        "media_type": "PODCAST",
+        "created_at": "2024-01-15T10:00:00Z",
+        "category_id": "wildlife-category-id",
+        "file_metadata": {
+            "episode_number": 1,
+            "season_number": 1,
+            "guest_names": [
+                "Jane Goodall",
+                "Steve Irwin"
+            ],
+            "show_notes": "In this episode, we explore the African savanna and meet some of its most iconic residents."
+        }
+    },
+    {
+        "id": "podcast-2",
+        "title": "Ocean Conservation Stories",
+        "description": "Dive deep into the world of marine conservation and discover the heroes working to protect our oceans.",
+        "file_url": "http://localhost:8000/uploads/audio/ocean-conservation.mp3",
+        "thumbnail_url": "http://localhost:8000/uploads/images/ocean-conservation-thumb.jpg",
+        "photographer": "Sylvia Earle",
+        "national_park": "Ocean Guardian",
+        "duration": 1800,
+        "file_size": 25000000,
+        "media_type": "PODCAST",
+        "created_at": "2024-01-10T15:30:00Z",
+        "category_id": "conservation-category-id",
+        "file_metadata": {
+            "episode_number": 2,
+            "season_number": 1,
+            "guest_names": [
+                "Jacques Cousteau"
+            ],
+            "show_notes": "Exploring the depths of ocean conservation efforts around the world."
+        }
+    },
+    {
+        "id": "podcast-3",
+        "title": "Forest Guardians",
+        "description": "Meet the dedicated individuals working tirelessly to protect our world's forests and the creatures that call them home.",
+        "file_url": "http://localhost:8000/uploads/audio/forest-guardians.mp3",
+        "thumbnail_url": "http://localhost:8000/uploads/images/forest-guardians-thumb.jpg",
+        "photographer": "Wangari Maathai",
+        "national_park": "Forest Protector",
+        "duration": 2100,
+        "file_size": 28000000,
+        "media_type": "PODCAST",
+        "created_at": "2024-01-05T12:00:00Z",
+        "category_id": "conservation-category-id",
+        "file_metadata": {
+            "episode_number": 3,
+            "season_number": 1,
+            "guest_names": [
+                "Chico Mendes",
+                "Julia Butterfly Hill"
+            ],
+            "show_notes": "Stories of forest conservation heroes and their impact on environmental protection."
+        }
+    }
+]

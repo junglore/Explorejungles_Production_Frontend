@@ -1,0 +1,1403 @@
+/**
+ * Category Selection V2 - Premium Interactive Styles 🌿
+ * 
+ * Advanced animations, glassmorphism, 3D effects, and sophisticated design
+ */
+
+/* ============================================
+   CONTAINER & BASE LAYOUT
+   ============================================ */
+
+.category-selection-v2 {
+    width: 100%;
+    min-height: 100vh;
+    background: transparent;
+    padding: 40px 20px 40px 20px; /* Reduced since Page2Section has padding now */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    perspective: 2000px;
+}
+
+/* ============================================
+   DECORATIVE LOGO
+   ============================================ */
+
+.decorative-logo {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    font-size: 120px;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ============================================
+   TOP PILL BUTTON
+   ============================================ */
+
+.top-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: #FFFFFF;
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    box-shadow: 
+        0px 10px 30px rgba(0, 0, 0, 0.15),
+        0px 6px 12px rgba(0, 0, 0, 0.1),
+        0px 3px 6px rgba(0, 0, 0, 0.08),
+        inset 0px 1px 2px rgba(255, 255, 255, 1);
+    margin-bottom: 40px;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.top-pill__icon {
+    font-size: 18px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    filter: saturate(1.4) brightness(1.1);
+}
+
+.top-pill__text {
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #16a085;
+    letter-spacing: 0.2px;
+}
+
+.top-pill__edit {
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    filter: saturate(1.6) brightness(1.15) hue-rotate(-5deg);
+}
+
+/* ============================================
+   HEADER SECTION
+   ============================================ */
+
+.header-section {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 800px;
+}
+
+.main-heading {
+    font-family: "DM Sans", sans-serif;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    letter-spacing: -0.5px;
+}
+
+.heading-part-1 {
+    color: #e8f5e9;
+    font-size: 48px;
+    font-weight: 400;
+    text-shadow: none;
+}
+
+.heading-part-2 {
+    background: linear-gradient(135deg, #ff9800 0%, #ffb74d 50%, #ffa726 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 64px;
+    font-weight: 600;
+    filter: none;
+}
+
+.subheading {
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #c8d6d0;
+    margin: 0;
+    font-weight: 400;
+    text-shadow: none;
+}
+
+/* ============================================
+   CARDS GRID
+   ============================================ */
+
+.cards-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 80px auto; /* Added more bottom margin */
+    padding: 0 20px;
+}
+
+/* ============================================
+   CATEGORY CARD - BASE STRUCTURE
+   ============================================ */
+
+.category-card-v2 {
+    position: relative;
+    width: 480px;
+    min-height: 620px;
+    background: linear-gradient(135deg, rgba(250, 250, 249, 0.95) 0%, rgba(245, 245, 244, 0.98) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: 2rem;
+    padding: 48px 40px;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 
+        0 25px 50px -12px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.category-card-v2--featured {
+    background: linear-gradient(135deg, rgba(254, 252, 232, 0.95) 0%, rgba(254, 249, 195, 0.98) 100%);
+}
+
+/* ============================================
+   SAFARI PATTERN OVERLAY
+   ============================================ */
+
+.safari-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.03;
+    background-image: 
+        radial-gradient(circle at 20px 20px, currentColor 2px, transparent 2px),
+        radial-gradient(circle at 60px 60px, currentColor 1px, transparent 1px);
+    background-size: 80px 80px;
+    background-position: 0 0, 40px 40px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.safari-pattern--amber {
+    color: #d97706;
+}
+
+.safari-pattern--emerald {
+    color: #047857;
+}
+
+/* ============================================
+   ANIMATED GRADIENT ORB
+   ============================================ */
+
+.gradient-orb {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.gradient-orb--amber {
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.4) 0%, transparent 70%);
+}
+
+.gradient-orb--emerald {
+    background: radial-gradient(circle, rgba(52, 211, 153, 0.4) 0%, transparent 70%);
+}
+
+/* ============================================
+   BOTTOM GRADIENT ACCENT
+   ============================================ */
+
+.bottom-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.bottom-gradient--amber {
+    background: linear-gradient(to top, rgba(251, 191, 36, 0.3), transparent);
+}
+
+.bottom-gradient--emerald {
+    background: linear-gradient(to top, rgba(52, 211, 153, 0.3), transparent);
+}
+
+/* ============================================
+   SHINE EFFECT OVERLAY
+   ============================================ */
+
+.shine-overlay {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        110deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.3) 50%,
+        transparent 70%
+    );
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* ============================================
+   FEATURED BADGE
+   ============================================ */
+
+.featured-badge {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #fbbf24 0%, #fde047 50%, #fbbf24 100%);
+    border-radius: 50px;
+    z-index: 20;
+    box-shadow: 
+        0 8px 24px rgba(251, 191, 36, 0.4),
+        0 0 40px rgba(251, 191, 36, 0.6) blur;
+    border: 2px solid rgba(254, 240, 138, 0.8);
+}
+
+.featured-badge__icon {
+    font-size: 16px;
+}
+
+.featured-badge__text {
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+    color: #78350f;
+    letter-spacing: 1.2px;
+}
+
+/* ============================================
+   CARD CONTENT
+   ============================================ */
+
+.card-content {
+    position: relative;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* LEFT ALIGNED */
+    height: 100%;
+}
+
+/* ============================================
+   ICON CONTAINER
+   ============================================ */
+
+.icon-container {
+    width: 112px;
+    height: 112px;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    margin-left: 0; /* LEFT ALIGNED */
+    position: relative;
+    box-shadow: 
+        0 0 60px rgba(0, 0, 0, 0.1),
+        0 0 30px rgba(0, 0, 0, 0.05),
+        inset 0 2px 4px rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.icon-container--amber {
+    background: linear-gradient(135deg, #fde047 0%, #fbbf24 50%, #f59e0b 100%);
+    box-shadow: 
+        0 0 60px rgba(251, 191, 36, 0.4),
+        0 0 30px rgba(245, 158, 11, 0.3),
+        inset 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.icon-container--emerald {
+    background: linear-gradient(135deg, #6ee7b7 0%, #34d399 50%, #10b981 100%);
+    box-shadow: 
+        0 0 60px rgba(52, 211, 153, 0.4),
+        0 0 30px rgba(16, 185, 129, 0.3),
+        inset 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.icon-emoji {
+    font-size: 56px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* ============================================
+   CARD TITLE
+   ============================================ */
+.card-title {
+    font-family: "DM Sans", sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: left; /* LEFT ALIGNED */
+    margin: 0 0 16px 0;
+    line-height: 1.1;
+}
+
+.card-title--amber {
+    background: linear-gradient(135deg, #92400e 0%, #b45309 50%, #92400e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.card-title--emerald {
+    background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #065f46 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ============================================
+   CARD DESCRIPTION
+   ============================================ */
+
+.card-description {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #57534e;
+    text-align: left; /* LEFT ALIGNED */
+    margin: 0 0 32px 0;
+    font-weight: 500;
+}
+
+/* ============================================
+   REWARD SECTION
+   ============================================ */
+
+.reward-section {
+    width: 100%;
+    padding: 20px 24px;
+    border-radius: 1.25rem;
+    margin-bottom: 24px;
+    border: 2px solid;
+}
+
+.reward-section--amber {
+    background: linear-gradient(135deg, rgba(254, 243, 199, 0.5) 0%, rgba(253, 230, 138, 0.5) 100%);
+    border-color: rgba(251, 191, 36, 0.6);
+    box-shadow: 0 8px 16px rgba(251, 191, 36, 0.15);
+}
+
+.reward-section--emerald {
+    background: linear-gradient(135deg, rgba(209, 250, 229, 0.5) 0%, rgba(167, 243, 208, 0.5) 100%);
+    border-color: rgba(52, 211, 153, 0.6);
+    box-shadow: 0 8px 16px rgba(52, 211, 153, 0.15);
+}
+.reward-label {
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #78716c;
+    opacity: 0.7;
+    text-align: left; /* LEFT ALIGNED */
+    margin-bottom: 12px;
+}
+
+.reward-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* LEFT ALIGNED */
+    gap: 16px;
+}
+
+/* ============================================
+   TROPHY CONTAINER
+   ============================================ */
+
+.trophy-container {
+    width: 56px;
+    height: 56px;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trophy-container--amber {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    box-shadow: 
+        0 4px 8px rgba(251, 191, 36, 0.2),
+        inset 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.trophy-container--emerald {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    box-shadow: 
+        0 4px 8px rgba(52, 211, 153, 0.2),
+        inset 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.trophy-icon {
+    font-size: 28px;
+}
+
+/* ============================================
+   REWARD AMOUNT
+   ============================================ */
+
+.reward-amount {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.credits-number {
+    font-family: "DM Sans", sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.credits-number--amber {
+    background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.credits-number--emerald {
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.credits-text {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #78716c;
+}
+
+/* ============================================
+   CTA BUTTON
+   ============================================ */
+
+.cta-button {
+    width: 100%;
+    padding: 20px 32px;
+    border: none;
+    border-radius: 1rem;
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-button--amber {
+    background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #f59e0b 100%);
+}
+
+.cta-button--emerald {
+    background: linear-gradient(135deg, #10b981 0%, #34d399 50%, #10b981 100%);
+}
+
+.cta-button:hover {
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.25),
+        0 0 40px currentColor;
+}
+
+.cta-button--amber:hover {
+    box-shadow: 
+        0 20px 40px rgba(245, 158, 11, 0.4),
+        0 0 40px rgba(251, 191, 36, 0.6);
+}
+
+.cta-button--emerald:hover {
+    box-shadow: 
+        0 20px 40px rgba(16, 185, 129, 0.4),
+        0 0 40px rgba(52, 211, 153, 0.6);
+}
+
+.cta-text {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-arrow {
+    font-size: 24px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ============================================
+   BUTTON SHINE EFFECT
+   ============================================ */
+
+.button-shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        110deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.4) 50%,
+        transparent 70%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ============================================
+   HOVER EFFECTS
+   ============================================ */
+
+/* Inner glow that illuminates card from within */
+.category-card-v2:hover {
+    transform: scale(1.03);
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.category-card-v2--featured:hover {
+    box-shadow: 
+        0 25px 50px -12px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset,
+        inset 0px 0px 70px 30px rgba(251, 191, 36, 0.4);
+}
+
+.category-card-v2:not(.category-card-v2--featured):hover {
+    box-shadow: 
+        0 25px 50px -12px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset,
+        inset 0px 0px 70px 30px rgba(16, 185, 129, 0.3);
+}
+
+/* Hide the old outer-glow element - deprecated */
+.outer-glow {
+    display: none;
+}
+
+.inner-highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2rem;
+    box-shadow: 
+        inset 0 0 80px rgba(255, 255, 255, 0.15),
+        inset 0 0 40px rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    z-index: 25;
+}
+
+/* ============================================
+   FOOTER PILL
+   ============================================ */
+
+.footer-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 36px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-radius: 50px;
+    box-shadow: 
+        0 8px 24px rgba(0, 0, 0, 0.15),
+        0 2px 8px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+    border: 2px solid rgba(139, 195, 74, 0.3);
+    margin-bottom: 40px;
+}
+
+.footer-pill__icon {
+    font-size: 22px;
+}
+
+.footer-pill__text {
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #3d3d3d;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* ============================================
+   LOADING & ERROR STATES
+   ============================================ */
+
+.category-selection-v2__loading,
+.category-selection-v2__error,
+.category-selection-v2__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.loading-spinner {
+    font-size: 80px;
+    margin-bottom: 24px;
+}
+
+.error-icon,
+.empty-icon {
+    font-size: 80px;
+    margin-bottom: 24px;
+    opacity: 0.5;
+}
+
+.category-selection-v2__error h2,
+.category-selection-v2__empty h2 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #292524;
+    margin: 0 0 12px 0;
+}
+
+.category-selection-v2__error p,
+.category-selection-v2__empty p,
+.category-selection-v2__loading p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    color: #78716c;
+    margin: 0 0 24px 0;
+}
+
+.retry-button {
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(16, 185, 129, 0.3);
+    transition: all 0.3s ease;
+}
+
+.retry-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(16, 185, 129, 0.4);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Large Tablets & Small Desktops (1024px - 1280px) */
+@media (max-width: 1280px) {
+    .category-selection-v2 {
+        padding: 60px 20px 60px 20px;
+    }
+
+    .cards-grid {
+        gap: 36px;
+        max-width: 1000px;
+    }
+
+    .category-card-v2 {
+        width: 440px;
+        min-height: auto;
+        height: auto;
+        padding: 40px 32px 36px 32px;
+    }
+
+    .card-content {
+        height: auto;
+    }
+
+    .main-heading {
+        font-size: 56px;
+    }
+
+    .heading-part-1 {
+        font-size: 44px;
+    }
+
+    .heading-part-2 {
+        font-size: 56px;
+    }
+
+    .icon-container {
+        margin-bottom: 28px;
+    }
+
+    .card-title {
+        margin-bottom: 14px;
+    }
+
+    .card-description {
+        margin-bottom: 28px;
+    }
+
+    .reward-section {
+        margin-bottom: 22px;
+    }
+}
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .category-selection-v2 {
+        padding: 50px 20px 50px 20px;
+    }
+
+    .top-pill {
+        padding: 10px 20px;
+        gap: 8px;
+    }
+
+    .top-pill__text {
+        font-size: 14px;
+    }
+
+    .top-pill__icon {
+        font-size: 16px;
+    }
+
+    .cards-grid {
+        gap: 32px;
+        max-width: 900px;
+    }
+
+    .category-card-v2 {
+        width: 400px;
+        min-height: auto;
+        height: auto;
+        padding: 38px 30px 34px 30px;
+    }
+
+    .card-content {
+        height: auto;
+    }
+
+    .main-heading {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .heading-part-1 {
+        font-size: 38px;
+    }
+
+    .heading-part-2 {
+        font-size: 48px;
+    }
+
+    .subheading {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .icon-container {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 26px;
+    }
+
+    .icon-emoji {
+        font-size: 52px;
+    }
+
+    .card-title {
+        font-size: 42px;
+        margin-bottom: 12px;
+    }
+
+    .card-description {
+        font-size: 15px;
+        margin-bottom: 26px;
+    }
+
+    .reward-section {
+        padding: 18px 20px;
+        margin-bottom: 20px;
+    }
+
+    .cta-button {
+        padding: 16px 32px;
+        font-size: 17px;
+    }
+
+    .footer-pill {
+        padding: 14px 28px;
+        font-size: 14px;
+    }
+}
+
+/* Small Tablets & Large Phones (600px - 768px) */
+@media (max-width: 768px) {
+    .category-selection-v2 {
+        padding: 40px 16px 50px 16px;
+    }
+
+    /* Hide decorative logo on mobile - it overlaps with heading */
+    .decorative-logo {
+        display: none;
+    }
+
+    .top-pill {
+        padding: 10px 18px;
+        gap: 6px;
+        margin-bottom: 30px;
+    }
+
+    .top-pill__text {
+        font-size: 13px;
+    }
+
+    .top-pill__icon,
+    .top-pill__edit {
+        font-size: 14px;
+    }
+
+    .header-section {
+        margin-bottom: 50px;
+        max-width: 600px;
+    }
+
+    .main-heading {
+        font-size: 40px;
+        margin-bottom: 18px;
+        gap: 6px;
+    }
+
+    .heading-part-1 {
+        font-size: 32px;
+        font-weight: 400;
+    }
+
+    .heading-part-2 {
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .subheading {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .cards-grid {
+        gap: 24px;
+        padding: 0 10px;
+    }
+
+    .category-card-v2 {
+        width: 100%;
+        max-width: 480px;
+        min-height: auto;
+        height: auto;
+        padding: 32px 24px 28px 24px;
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .icon-container {
+        width: 88px;
+        height: 88px;
+        margin-bottom: 20px;
+    }
+
+    .icon-emoji {
+        font-size: 44px;
+    }
+
+    .card-title {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .card-description {
+        font-size: 15px;
+        margin-bottom: 20px;
+        flex-grow: 0;
+    }
+
+    .reward-section {
+        padding: 14px 16px;
+        margin-bottom: 18px;
+        margin-top: auto;
+    }
+
+    .reward-label {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .trophy-container {
+        width: 50px;
+        height: 50px;
+    }
+
+    .trophy-emoji {
+        font-size: 23px;
+    }
+
+    .credits-number {
+        font-size: 30px;
+    }
+
+    .credits-label {
+        font-size: 13px;
+    }
+
+    .cta-button {
+        padding: 15px 26px;
+        font-size: 16px;
+        margin-top: 0;
+    }
+
+    .footer-pill {
+        padding: 12px 24px;
+        font-size: 13px;
+        max-width: 90%;
+    }
+
+    .footer-pill__text {
+        font-size: 13px;
+    }
+
+    .footer-pill__icon {
+        font-size: 18px;
+    }
+}
+
+/* Mobile Phones (480px - 600px) */
+@media (max-width: 600px) {
+    .category-selection-v2 {
+        padding: 32px 12px 40px 12px;
+    }
+
+    /* Keep decorative logo hidden */
+    .decorative-logo {
+        display: none;
+    }
+
+    .top-pill {
+        padding: 8px 16px;
+        gap: 6px;
+        margin-bottom: 24px;
+    }
+
+    .top-pill__text {
+        font-size: 12px;
+    }
+
+    .header-section {
+        margin-bottom: 40px;
+    }
+
+    .main-heading {
+        font-size: 34px;
+        margin-bottom: 16px;
+    }
+
+    .heading-part-1 {
+        font-size: 28px;
+    }
+
+    .heading-part-2 {
+        font-size: 34px;
+    }
+
+    .subheading {
+        font-size: 15px;
+    }
+
+    .cards-grid {
+        gap: 20px;
+        padding: 0 8px;
+    }
+
+    .category-card-v2 {
+        width: 100%;
+        max-width: 400px;
+        min-height: auto;
+        height: auto;
+        padding: 28px 22px 24px 22px;
+    }
+
+    .icon-container {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 18px;
+    }
+
+    .icon-emoji {
+        font-size: 40px;
+    }
+
+    .card-title {
+        font-size: 32px;
+        margin-bottom: 8px;
+    }
+
+    .card-description {
+        font-size: 14px;
+        margin-bottom: 18px;
+        line-height: 1.5;
+    }
+
+    .reward-section {
+        padding: 12px 14px;
+        margin-bottom: 16px;
+    }
+
+    .cta-button {
+        padding: 14px 24px;
+        font-size: 15px;
+    }
+
+    .cta-arrow {
+        font-size: 18px;
+    }
+
+    .footer-pill {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+
+/* Small Mobile Phones (320px - 480px) */
+@media (max-width: 480px) {
+    .category-selection-v2 {
+        padding: 28px 10px 36px 10px;
+    }
+
+    /* Keep decorative logo hidden */
+    .decorative-logo {
+        display: none;
+    }
+
+    .top-pill {
+        padding: 8px 14px;
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+
+    .top-pill__text {
+        font-size: 11px;
+    }
+
+    .top-pill__icon,
+    .top-pill__edit {
+        font-size: 13px;
+    }
+
+    .header-section {
+        margin-bottom: 32px;
+    }
+
+    .main-heading {
+        font-size: 28px;
+        margin-bottom: 14px;
+        gap: 4px;
+        letter-spacing: -0.8px;
+    }
+
+    .heading-part-1 {
+        font-size: 24px;
+    }
+
+    .heading-part-2 {
+        font-size: 28px;
+    }
+
+    .subheading {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .cards-grid {
+        gap: 18px;
+        padding: 0 6px;
+        margin-bottom: 60px;
+    }
+
+    .category-card-v2 {
+        width: 100%;
+        max-width: 360px;
+        min-height: auto;
+        height: auto;
+        padding: 24px 18px 20px 18px;
+        border-radius: 1.5rem;
+    }
+
+    /* Reduce 3D effect on small screens for better performance */
+    .category-card-v2:hover {
+        transform: scale(1.02);
+    }
+
+    .featured-badge {
+        padding: 6px 14px;
+        font-size: 10px;
+        top: 16px;
+        right: 16px;
+    }
+
+    .icon-container {
+        width: 72px;
+        height: 72px;
+        margin-bottom: 16px;
+        border-radius: 1.2rem;
+    }
+
+    .icon-emoji {
+        font-size: 36px;
+    }
+
+    .card-title {
+        font-size: 28px;
+        margin-bottom: 8px;
+        line-height: 1;
+    }
+
+    .card-description {
+        font-size: 13px;
+        margin-bottom: 16px;
+        line-height: 1.4;
+    }
+
+    .reward-section {
+        padding: 12px 14px;
+        margin-bottom: 14px;
+        border-radius: 1rem;
+    }
+
+    .reward-label {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+        margin-bottom: 8px;
+    }
+
+    .reward-content {
+        gap: 12px;
+    }
+
+    .trophy-container {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+    }
+
+    .trophy-emoji {
+        font-size: 20px;
+    }
+
+    .credits-number {
+        font-size: 26px;
+    }
+
+    .credits-label {
+        font-size: 12px;
+    }
+
+    .cta-button {
+        padding: 13px 20px;
+        font-size: 14px;
+        border-radius: 1rem;
+    }
+
+    .cta-arrow {
+        font-size: 16px;
+    }
+
+    .footer-pill {
+        padding: 10px 18px;
+        font-size: 11px;
+        gap: 8px;
+    }
+
+    .footer-pill__text {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+
+    .footer-pill__icon {
+        font-size: 16px;
+    }
+
+    /* Reduce animations on mobile for performance */
+    .gradient-orb {
+        opacity: 0.2;
+    }
+
+    .safari-pattern {
+        opacity: 0.02;
+    }
+}
+
+/* Extra Small Devices (< 360px) */
+@media (max-width: 360px) {
+    .category-selection-v2 {
+        padding: 24px 8px 32px 8px;
+    }
+
+    /* Keep decorative logo hidden */
+    .decorative-logo {
+        display: none;
+    }
+
+    .main-heading {
+        font-size: 24px;
+    }
+
+    .heading-part-1 {
+        font-size: 20px;
+    }
+
+    .heading-part-2 {
+        font-size: 24px;
+    }
+
+    .subheading {
+        font-size: 13px;
+    }
+
+    .category-card-v2 {
+        max-width: 320px;
+        min-height: auto;
+        height: auto;
+        padding: 22px 16px 18px 16px;
+    }
+
+    .icon-container {
+        width: 68px;
+        height: 68px;
+        margin-bottom: 14px;
+    }
+
+    .icon-emoji {
+        font-size: 34px;
+    }
+
+    .card-title {
+        font-size: 26px;
+    }
+
+    .card-description {
+        font-size: 12px;
+        margin-bottom: 14px;
+    }
+
+    .reward-section {
+        padding: 10px 12px;
+        margin-bottom: 12px;
+    }
+
+    .trophy-container {
+        width: 40px;
+        height: 40px;
+    }
+
+    .trophy-emoji {
+        font-size: 18px;
+    }
+
+    .credits-number {
+        font-size: 24px;
+    }
+
+    .cta-button {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+    .category-selection-v2 {
+        padding: 20px 16px 30px 16px;
+    }
+
+    .header-section {
+        margin-bottom: 30px;
+    }
+
+    .main-heading {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .heading-part-2 {
+        font-size: 32px;
+    }
+
+    .cards-grid {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .category-card-v2 {
+        min-height: 420px;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+.category-card-v2:focus-visible {
+    outline: 3px solid rgba(139, 195, 74, 0.6);
+    outline-offset: 4px;
+}

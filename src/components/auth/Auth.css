@@ -1,0 +1,1190 @@
+/* Auth Container - Split Layout */
+.auth-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    position: relative;
+}
+
+/* Left Side - Jungle Background */
+.auth-left {
+    flex: 1;
+    background-image: url('../../assets/images/auth/login.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100vh;
+}
+
+.jungle-logo {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    height: 80px;
+    width: auto;
+    filter: brightness(0) saturate(100%) invert(100%); /* White color filter */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.jungle-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Right Side - Form Area */
+.auth-right {
+    flex: 1;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 40%;
+    margin-left: 60%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+/* Back Button */
+.back-button {
+    padding: 15px 35px 0;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #9CA3AF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    color: #6B7280;
+}
+
+.back-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Form Container */
+.auth-form {
+    flex: 1;
+    padding: 20px 35px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Typography */
+.auth-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+}
+
+.auth-subtitle {
+    font-size: 14px;
+    color: #6B7280;
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+}
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+    margin: 0;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #111827;
+    background: white;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #1E2D27;
+    box-shadow: 0 0 0 3px rgba(30, 45, 39, 0.1);
+}
+
+.form-input::placeholder {
+    color: #9CA3AF;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0;
+}
+
+.checkbox-label {
+    font-size: 13px;
+    color: #374151;
+    cursor: pointer;
+}
+
+/* Form Extras - Remember me and Forgot password */
+.form-extras {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px 0;
+}
+
+.forgot-password-link {
+    font-size: 13px;
+    color: #1E2D27;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-password-link:hover {
+    text-decoration: underline;
+}
+
+/* Auth Button */
+.auth-button {
+    width: 100%;
+    padding: 10px 20px;
+    background: #1E2D27;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.auth-button:hover {
+    background: #162420;
+}
+
+.auth-button:active {
+    transform: translateY(1px);
+}
+
+.auth-button.secondary {
+    background: #6B7280;
+    margin-top: 12px;
+}
+
+.auth-button.secondary:hover {
+    background: #4B5563;
+}
+
+/* Auth Link */
+.auth-link {
+    text-align: center;
+    font-size: 13px;
+    color: #6B7280;
+    margin: 10px 0 0 0;
+}
+
+.link-text {
+    color: #1E2D27;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link-text:hover {
+    text-decoration: underline;
+}
+
+/* Success and Error Messages */
+.success-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+    background: #F0FDF4;
+    border: 1px solid #BBF7D0;
+    border-radius: 8px;
+    margin: 24px 0;
+    color: #059669;
+}
+
+.success-message p {
+    margin: 12px 0 0 0;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.success-icon {
+    margin-bottom: 8px;
+}
+
+.error-message {
+    color: #e74c3c;
+    background: #fadbd8;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+    font-size: 14px;
+    border: 1px solid #f1948a;
+}
+
+.message {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+    font-size: 14px;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #1E2D27;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Email Verification Info */
+.email-verification-info {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+
+.email-icon {
+    margin-bottom: 16px;
+}
+
+.verification-steps h3 {
+    margin: 0 0 16px 0;
+    font-size: 18px;
+    color: #1F2937;
+}
+
+.verification-steps ol {
+    text-align: left;
+    margin: 0;
+    padding-left: 20px;
+    color: #4B5563;
+}
+
+.verification-steps li {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+/* Verification Actions */
+.verification-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+/* Email Help */
+.email-help {
+    background: #FFFBEB;
+    border: 1px solid #FED7AA;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 24px 0;
+}
+
+.email-help h4 {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    color: #92400E;
+}
+
+.email-help ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #78350F;
+}
+
+.email-help li {
+    margin: 6px 0;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .auth-container {
+        flex-direction: column;
+    }
+
+    .auth-left {
+        position: relative;
+        min-height: 200px;
+        max-height: 200px;
+        flex: none;
+        width: 100%;
+    }
+
+    .auth-right {
+        width: 100%;
+        margin-left: 0;
+        overflow-y: visible;
+        flex: 1;
+    }
+
+    .jungle-logo {
+        height: 60px;
+        top: 30px;
+        left: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .auth-container {
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    .auth-left {
+        position: relative;
+        min-height: 120px;
+        max-height: 120px;
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    .auth-right {
+        width: 100%;
+        margin-left: 0;
+        overflow-y: visible;
+        min-height: auto;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .auth-form {
+        padding: 20px 24px 24px;
+        flex: 1;
+    }
+
+    .back-button {
+        padding: 15px 24px 0;
+        flex-shrink: 0;
+    }
+
+    .auth-title {
+        font-size: 26px;
+        margin-bottom: 12px;
+    }
+
+    .auth-subtitle {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    .jungle-logo {
+        height: 45px;
+        top: 20px;
+        left: 25px;
+    }
+
+    .verification-actions {
+        gap: 8px;
+    }
+
+    .form {
+        gap: 20px;
+    }
+
+    .form-group {
+        gap: 6px;
+    }
+
+    .form-input {
+        padding: 14px 16px;
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+
+    .form-label {
+        font-size: 15px;
+    }
+
+    .auth-button {
+        padding: 14px 24px;
+        font-size: 16px;
+        min-height: 48px; /* Touch-friendly */
+    }
+
+    .form-extras {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .checkbox-group {
+        order: 2;
+    }
+
+    .forgot-password-link {
+        order: 1;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-left {
+        min-height: 100px;
+        max-height: 100px;
+    }
+
+    .auth-form {
+        padding: 16px 16px 16px;
+    }
+
+    .back-button {
+        padding: 12px 16px 0;
+    }
+
+    .auth-title {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .auth-subtitle {
+        font-size: 14px;
+        margin-bottom: 24px;
+        line-height: 1.4;
+    }
+
+    .form {
+        gap: 16px;
+    }
+
+    .jungle-logo {
+        height: 35px;
+        top: 15px;
+        left: 20px;
+    }
+
+    .email-verification-info,
+    .email-help {
+        padding: 16px;
+        margin: 16px 0;
+    }
+
+    .form-input {
+        padding: 12px 14px;
+        border-radius: 6px;
+    }
+
+    .auth-button {
+        padding: 12px 20px;
+        border-radius: 6px;
+        min-height: 44px;
+    }
+
+    .back-link {
+        font-size: 15px;
+        gap: 6px;
+    }
+
+    .verification-steps ol {
+        padding-left: 16px;
+    }
+
+    .email-help ul {
+        padding-left: 16px;
+    }
+
+    .success-message {
+        padding: 16px;
+        margin: 16px 0;
+    }
+
+    .success-message p {
+        font-size: 15px;
+    }
+
+    .loading-spinner {
+        padding: 30px 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .auth-left {
+        min-height: 80px;
+        max-height: 80px;
+    }
+
+    .auth-form {
+        padding: 12px 12px 12px;
+    }
+
+    .back-button {
+        padding: 10px 12px 0;
+    }
+
+    .auth-title {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .auth-subtitle {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .jungle-logo {
+        height: 30px;
+        top: 12px;
+        left: 15px;
+    }
+
+    .form {
+        gap: 14px;
+    }
+
+    .form-group {
+        gap: 4px;
+    }
+
+    .form-input {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+
+    .form-label {
+        font-size: 14px;
+    }
+
+    .auth-button {
+        padding: 10px 16px;
+        font-size: 15px;
+        min-height: 40px;
+    }
+
+    .email-verification-info,
+    .email-help {
+        padding: 12px;
+        margin: 12px 0;
+    }
+
+    .verification-steps h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .email-help h4 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .back-link {
+        font-size: 14px;
+    }
+
+    .auth-link {
+        font-size: 13px;
+        margin-top: 16px;
+    }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 768px) {
+    /* Ensure form is always visible without scrolling on mobile */
+    .auth-container {
+        min-height: 100vh;
+        max-height: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .auth-left {
+        flex-shrink: 0;
+        overflow: hidden;
+    }
+
+    .auth-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: 0;
+    }
+
+    /* Better spacing for mobile */
+    .form-extras {
+        margin: 4px 0 8px 0;
+    }
+
+    .checkbox-label {
+        font-size: 15px;
+    }
+
+    /* Touch-friendly checkbox */
+    .checkbox-group {
+        padding: 4px 0;
+    }
+
+    /* OTP Input styling for mobile */
+    .otp-input {
+        font-size: 1.2rem !important;
+        letter-spacing: 0.3rem !important;
+        padding: 16px 12px !important;
+        text-align: center;
+    }
+
+    /* Better message styling */
+    .message {
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 12px 0;
+    }
+
+    .error-message,
+    .success-message {
+        font-size: 14px;
+        padding: 12px 14px;
+        margin: 12px 0;
+        border-radius: 6px;
+    }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+    .auth-left {
+        min-height: 60px;
+        max-height: 60px;
+    }
+
+    .auth-form {
+        padding: 12px 24px;
+    }
+
+    .jungle-logo {
+        height: 30px;
+        top: 10px;
+        left: 25px;
+    }
+
+    .auth-title {
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+
+    .auth-subtitle {
+        font-size: 13px;
+        margin-bottom: 16px;
+    }
+
+    .form {
+        gap: 12px;
+    }
+}
+
+/* Additional styles for better mobile UX */
+.form-help {
+    font-size: 12px;
+    color: #6B7280;
+    margin-top: 4px;
+    line-height: 1.3;
+}
+
+.otp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.otp-input {
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+}
+
+/* Logo link styling */
+.jungle-logo {
+    display: block;
+    text-decoration: none;
+}
+
+.jungle-logo:focus {
+    outline: 2px solid #1E2D27;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Improved touch targets for mobile */
+@media (max-width: 768px) {
+    .back-link,
+    .forgot-password-link,
+    .link-text {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 0;
+    }
+
+    .checkbox-group {
+        min-height: 44px;
+        align-items: center;
+    }
+
+    .jungle-logo {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Fix for iOS zoom */
+@media (max-width: 768px) {
+    .form-input,
+    .form-input:focus {
+        font-size: 16px;
+        transform: none;
+    }
+}
+
+/* Improved accessibility */
+.form-input:focus,
+.auth-button:focus,
+.back-link:focus,
+.forgot-password-link:focus,
+.link-text:focus {
+    outline: 2px solid #1E2D27;
+    outline-offset: 2px;
+}
+
+/* Better error state styling */
+.form-input.error {
+    border-color: #EF4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Loading state improvements */
+.auth-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.auth-button:disabled:hover {
+    background: #1E2D27;
+    transform: none;
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+    .auth-form {
+        padding: 12px 8px;
+    }
+
+    .back-button {
+        padding: 8px;
+    }
+
+    .auth-title {
+        font-size: 18px;
+    }
+
+    .auth-subtitle {
+        font-size: 12px;
+    }
+
+    .form-input {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .auth-button {
+        padding: 8px 12px;
+        font-size: 14px;
+        min-height: 36px;
+    }
+}
+
+/* Google Login Button Styles */
+.google-login-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Style the Google login button to match the design */
+.google-login-container > div {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    height: 44px !important;
+    min-height: 44px !important;
+}
+
+.google-login-container button {
+    width: 100% !important;
+    min-height: 44px !important; /* base height */
+    height: 44px !important;     /* enforce exact height */
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid #dadce0 !important;
+    background: white !important;
+    color: #3c4043 !important;
+    padding: 0 16px !important;
+}
+
+.google-login-container button:hover {
+    background: #f8f9fa !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Facebook Login Button Styles */
+.facebook-login-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.facebook-login-container .kep-login-facebook,
+.facebook-login-container .facebook-login-button {
+    width: 100% !important;
+    min-height: 44px !important; /* base height */
+    height: 44px !important;     /* enforce exact height */
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid #dadce0 !important;
+    background: white !important;
+    background-color: white !important;
+    color: #3c4043 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    cursor: pointer !important;
+    padding: 0 16px !important;
+}
+
+.facebook-login-container .kep-login-facebook:hover,
+.facebook-login-container .facebook-login-button:hover {
+    background: #f8f9fa !important;
+    background-color: #f8f9fa !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.facebook-login-container .kep-login-facebook:active,
+.facebook-login-container .facebook-login-button:active {
+    transform: translateY(0) !important;
+    background: #f1f3f4 !important;
+    background-color: #f1f3f4 !important;
+}
+
+/* LinkedIn Login Button Styles */
+.linkedin-login-button {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.linkedin-login-button button {
+    width: 100% !important;
+    min-height: 44px !important; /* base height */
+    height: 44px !important;     /* enforce exact height */
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid #dadce0 !important;
+    background: white !important;
+    color: #3c4043 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    cursor: pointer !important;
+    padding: 0 16px !important;
+}
+
+.linkedin-login-button button:hover {
+    background: #f8f9fa !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.linkedin-login-button button:active {
+    transform: translateY(0) !important;
+    background: #f1f3f4 !important;
+}
+
+/* OR divider styles */
+.or-divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #666;
+}
+
+.or-divider span {
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #888;
+    background: white;
+}
+
+.or-divider > div {
+    flex: 1;
+    height: 1px;
+    background-color: #ddd;
+}
+
+/* Force Facebook button to have white background - override library defaults */
+.facebook-login-container button,
+.facebook-login-container div[role="button"],
+.facebook-login-container .fb-login-button,
+.facebook-login-container [class*="facebook"] {
+    background: white !important;
+    background-color: white !important;
+    border: 1px solid #dadce0 !important;
+    color: #3c4043 !important;
+}
+
+.facebook-login-container button:hover,
+.facebook-login-container div[role="button"]:hover,
+.facebook-login-container .fb-login-button:hover,
+.facebook-login-container [class*="facebook"]:hover {
+    background: #f8f9fa !important;
+    background-color: #f8f9fa !important;
+}
+
+/* Social login buttons container */
+.social-login-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Ensure all OAuth buttons have the same dimensions and responsive behavior */
+.social-login-buttons > * {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+/* Force uniform sizing for all button types */
+.social-login-buttons button,
+.social-login-buttons > div > div,
+.social-login-buttons > div > button,
+.social-login-buttons .google-login-container > div,
+.social-login-buttons .facebook-login-container > div,
+.social-login-buttons .linkedin-login-button button {
+    height: 44px !important;     /* unified height */
+    min-height: 44px !important; /* unified height */
+    max-height: 44px !important; /* unified height */
+    width: 100% !important;      /* full width to match OR divider */
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 16px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    border: 1px solid #dadce0 !important;
+    background: white !important;
+    color: #3c4043 !important;
+}
+
+/* Mobile responsiveness for OAuth buttons */
+@media (max-width: 768px) {
+    .social-login-buttons {
+        flex-direction: row;
+        gap: 8px;
+        margin-bottom: 16px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .social-login-buttons > * {
+        flex: 1;
+        max-width: none;
+    }
+    
+    .google-login-container,
+    .facebook-login-container,
+    .linkedin-login-button {
+        flex: 1;
+        max-width: none;
+    }
+    
+    .google-login-container > div {
+        width: 100% !important;
+    }
+    
+    .google-login-container button {
+        font-size: 14px !important;
+        width: 100% !important;
+    }
+    
+    .facebook-login-container .kep-login-facebook,
+    .facebook-login-container .facebook-login-button {
+        font-size: 14px !important;
+        width: 100% !important;
+    }
+    
+    .linkedin-login-button button {
+        font-size: 14px !important;
+        width: 100% !important;
+    }
+    
+    .social-login-buttons button,
+    .social-login-buttons > div > div,
+    .social-login-buttons > div > button,
+    .social-login-buttons .google-login-container > div,
+    .social-login-buttons .facebook-login-container > div,
+    .social-login-buttons .linkedin-login-button button {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Mobile styles for custom Google button */
+    .google-login-container button[type="button"] {
+        width: 100% !important;
+        font-size: 14px !important;
+    }
+    
+    .or-divider span {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+}
+
+/* Tablet responsiveness */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .social-login-buttons {
+        gap: 10px;
+    }
+    
+    .social-login-buttons > * {
+        width: 100%;
+    }
+    
+    .social-login-buttons button,
+    .social-login-buttons > div > div,
+    .social-login-buttons > div > button {
+        font-size: 11px !important;
+        padding: 0 8px !important;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .social-login-buttons {
+        gap: 6px;
+        margin-bottom: 12px;
+    }
+    
+    .social-login-buttons button,
+    .social-login-buttons > div > div,
+    .social-login-buttons > div > button {
+        font-size: 12px !important;
+        padding: 0 8px !important;
+    }
+    
+    .google-login-container button,
+    .facebook-login-container .kep-login-facebook,
+    .facebook-login-container .facebook-login-button,
+    .linkedin-login-button button {
+        font-size: 12px !important;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .social-login-buttons {
+        gap: 4px;
+    }
+    
+    .social-login-buttons button,
+    .social-login-buttons > div > div,
+    .social-login-buttons > div > button {
+        font-size: 11px !important;
+        padding: 0 6px !important;
+    }
+    
+    .google-login-container button,
+    .facebook-login-container .kep-login-facebook,
+    .facebook-login-container .facebook-login-button,
+    .linkedin-login-button button {
+        font-size: 11px !important;
+    }
+    
+    .or-divider span {
+        font-size: 11px;
+        padding: 0 8px;
+    }
+}

@@ -1,0 +1,58 @@
+[
+    {
+        "id": "random-1",
+        "title": "Random Myth 1",
+        "myth_statement": "Bears always attack humans on sight",
+        "fact_explanation": "Bears generally avoid humans and attacks are rare when proper precautions are taken",
+        "image_url": "/test-images/bear.jpg",
+        "is_featured": true
+    },
+    {
+        "id": "random-2",
+        "title": "Random Fact 1",
+        "myth_statement": "Leopards can climb trees with their prey",
+        "fact_explanation": "Leopards are excellent climbers and often store prey in trees to protect from other predators",
+        "image_url": "/test-images/leopard.jpg",
+        "is_featured": false
+    },
+    {
+        "id": "random-3",
+        "title": "Random Myth 2",
+        "myth_statement": "All wild animals are aggressive toward humans",
+        "fact_explanation": "Most wild animals avoid human contact and only become aggressive when threatened or protecting young",
+        "image_url": "/test-images/deer.jpg",
+        "is_featured": true
+    },
+    {
+        "id": "random-4",
+        "title": "Random Fact 2",
+        "myth_statement": "Wolves live in strict hierarchical packs",
+        "fact_explanation": "Wolf packs are typically family units led by the breeding pair, not dominance hierarchies",
+        "image_url": "/test-images/wolf.jpg",
+        "is_featured": false
+    },
+    {
+        "id": "random-5",
+        "title": "Random Myth 3",
+        "myth_statement": "Sharks need to keep swimming to breathe",
+        "fact_explanation": "While some sharks need to swim to breathe, many species can pump water over their gills while stationary",
+        "image_url": "/test-images/shark.jpg",
+        "is_featured": true
+    },
+    {
+        "id": "random-6",
+        "title": "Random Fact 3",
+        "myth_statement": "Bees die after stinging once",
+        "fact_explanation": "Only honeybees die after stinging mammals due to their barbed stinger; other bees can sting multiple times",
+        "image_url": "/test-images/bee.jpg",
+        "is_featured": false
+    },
+    {
+        "id": "random-7",
+        "title": "Random Myth 4",
+        "myth_statement": "Owls can turn their heads 360 degrees",
+        "fact_explanation": "Owls can rotate their heads up to 270 degrees, not a full 360 degrees",
+        "image_url": "/test-images/owl.jpg",
+        "is_featured": true
+    }
+]

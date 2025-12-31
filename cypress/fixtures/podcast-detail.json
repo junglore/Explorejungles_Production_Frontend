@@ -1,0 +1,59 @@
+{
+    "id": "test-podcast-id",
+    "title": "E2E Test Wildlife Podcast",
+    "description": "This is a comprehensive test podcast created via E2E testing to verify the complete podcast workflow from admin creation to frontend playback. In this episode, we explore the fascinating world of wildlife conservation and the dedicated individuals working to protect endangered species around the globe.\n\nJoin us as we discuss the latest conservation efforts, breakthrough research, and inspiring success stories from the field. Our expert guests share their insights on wildlife behavior, habitat preservation, and the critical role that technology plays in modern conservation efforts.\n\nTopics covered in this episode:\n- Current state of wildlife conservation\n- Innovative tracking technologies\n- Community-based conservation programs\n- Success stories from around the world\n- How listeners can get involved",
+    "file_url": "http://localhost:8000/uploads/audio/e2e-test-podcast.mp3",
+    "thumbnail_url": "http://localhost:8000/uploads/images/e2e-test-podcast-thumb.jpg",
+    "photographer": "E2E Test Host",
+    "national_park": "E2E Test Show",
+    "duration": 1800,
+    "file_size": 25000000,
+    "media_type": "PODCAST",
+    "created_at": "2024-01-20T14:30:00Z",
+    "category_id": "wildlife-category-id",
+    "filename": "e2e-test-podcast.mp3",
+    "original_filename": "E2E Test Wildlife Podcast.mp3",
+    "mime_type": "audio/mpeg",
+    "file_metadata": {
+        "episode_number": 5,
+        "season_number": 2,
+        "guest_names": [
+            "Dr. Jane Smith",
+            "Prof. Michael Johnson",
+            "Sarah Wildlife"
+        ],
+        "show_notes": "Additional show notes for this episode including links to resources mentioned during the discussion and ways for listeners to support conservation efforts.",
+        "transcript_url": "http://localhost:8000/uploads/transcripts/e2e-test-podcast.txt",
+        "chapters": [
+            {
+                "title": "Introduction",
+                "start_time": 0,
+                "end_time": 300
+            },
+            {
+                "title": "Guest Interviews",
+                "start_time": 300,
+                "end_time": 1200
+            },
+            {
+                "title": "Conservation Success Stories",
+                "start_time": 1200,
+                "end_time": 1500
+            },
+            {
+                "title": "How to Get Involved",
+                "start_time": 1500,
+                "end_time": 1800
+            }
+        ],
+        "tags": [
+            "wildlife",
+            "conservation",
+            "environment",
+            "education"
+        ],
+        "language": "en",
+        "explicit": false,
+        "copyright": "© 2024 Junglore Podcast Network"
+    }
+}
