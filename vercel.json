@@ -6,7 +6,23 @@
   "devCommand": "npm run dev",
   "rewrites": [
     {
-      "source": "/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|manifest.json|assets|static).*)",
+      "source": "/uploads/:path*",
+      "destination": "https://web-production-f23a.up.railway.app/uploads/:path*"
+    },
+    {
+      "source": "/images/:path*",
+      "destination": "https://web-production-f23a.up.railway.app/uploads/images/:path*"
+    },
+    {
+      "source": "/videos/:path*",
+      "destination": "https://web-production-f23a.up.railway.app/uploads/videos/:path*"
+    },
+    {
+      "source": "/audio/:path*",
+      "destination": "https://web-production-f23a.up.railway.app/uploads/audio/:path*"
+    },
+    {
+      "source": "/((?!api|uploads|images|videos|audio|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|manifest.json|assets|static).*)",
       "destination": "/index.html"
     }
   ],
