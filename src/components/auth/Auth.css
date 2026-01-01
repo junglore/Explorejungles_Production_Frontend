@@ -1188,3 +1188,50 @@
         padding: 0 8px;
     }
 }
+
+/* Social Login Overlay Pattern - Makes OAuth buttons work with custom design */
+.google-login-container,
+.facebook-login-container {
+    position: relative !important;
+    width: 100%;
+}
+
+/* Position native OAuth buttons behind custom buttons */
+.google-login-container > div:first-child,
+.facebook-login-container > div:first-child {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 0 !important;
+    z-index: 2 !important;
+    pointer-events: auto !important;
+}
+
+/* Style custom overlay buttons to be visible and clickable */
+.google-login-container > button,
+.facebook-login-container > button {
+    position: relative !important;
+    z-index: 1 !important;
+    width: 100% !important;
+    pointer-events: none !important;
+}
+
+/* Make native buttons fully cover the container */
+.google-login-container div[role="button"],
+.google-login-container iframe,
+.facebook-login-container .facebook-login-button,
+.facebook-login-container .kep-login-facebook {
+    width: 100% !important;
+    height: 44px !important;
+    cursor: pointer !important;
+}
+
+/* Ensure Google iframe renders at full width */
+.google-login-container > div > div,
+.google-login-container > div > div > div,
+.google-login-container iframe {
+    width: 100% !important;
+    min-width: 100% !important;
+}

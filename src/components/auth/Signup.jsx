@@ -319,6 +319,16 @@ export const Signup = () => {
                             />
                         </div>
 
+                        <p style={{
+                            fontSize: '12px',
+                            color: '#666',
+                            textAlign: 'center',
+                            marginBottom: '15px',
+                            lineHeight: '1.4'
+                        }}>
+                            By creating an account, I am agreeing to Explore Jungles' <Link to="/terms-of-service" className="link-text">Terms of Services</Link> and <Link to="/privacy-policy" className="link-text">Privacy Policy</Link>.
+                        </p>
+
                         <button
                             type="submit"
                             className="auth-button"
