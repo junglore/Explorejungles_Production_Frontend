@@ -1768,7 +1768,7 @@ function CommunityPage() {
                     </NavigationContainer>
                 </CarouselContainer>
 
-                <CarouselTitle>CLICK TO WATCH LIVE STREAMS</CarouselTitle>
+                {/* <CarouselTitle>CLICK TO WATCH LIVE STREAMS</CarouselTitle> */}
 
                 <CarouselDots>
                     {(tvItems.length === 0 ? [0,1,2] : tvItems.map((_, i) => i)).map((_, index) => (
