@@ -337,7 +337,7 @@ const NotificationBadge = styled("div")({
 function FaunaBot() {
     const [isExpanded, setIsExpanded] = useState(false);
     const [message, setMessage] = useState('');
-    const [hasNotification] = useState(true); // You can control this based on new messages
+    const [hasNotification] = useState(false); // You can control this based on new messages
     const navigate = useNavigate();
 
     const toggleChat = () => {
