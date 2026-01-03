@@ -1332,33 +1332,49 @@ const NavigationContainer = styled("div")(({ theme }) => ({
     },
 }));
 
-// Navigation button styling - matching CardCarousel
+// Navigation button styling - matching TV carousel
 const NavButton = styled(Button)(({ theme }) => ({
-    width: '50px',
-    height: '50px',
+    width: '80px',
+    height: '80px',
     borderRadius: '50%',
-    border: '2px solid rgba(255, 232, 161, 0.8)',
-    backgroundColor: 'rgba(30, 45, 39, 0.8)', // Match CardCarousel opacity
+    border: '3px solid rgba(255, 232, 161, 1)',
+    backgroundColor: 'rgba(68, 122, 101, 0.95)',
     color: 'rgba(255, 232, 161, 1)',
     backdropFilter: 'blur(10px)',
+    fontSize: '40px',
+    fontWeight: 'bold',
     pointerEvents: 'auto',
+    boxShadow: '0 4px 20px rgba(68, 122, 101, 0.6)',
     transition: 'all 0.3s ease',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '0',
+    minWidth: '80px',
+    minHeight: '80px',
     '&:hover': {
-        borderColor: 'rgba(255, 232, 161, 1)',
-        backgroundColor: 'rgba(30, 45, 39, 0.9)', // Slightly more opaque on hover
-        transform: 'scale(1.05)', // Slightly less scale than before
+        transform: 'scale(1.1)',
+        backgroundColor: 'rgba(255, 232, 161, 1)',
+        color: 'rgba(30, 45, 39, 1)',
+        boxShadow: '0 6px 30px rgba(255, 232, 161, 0.8)',
     },
     '&:disabled': {
         opacity: 0.5,
         cursor: 'not-allowed',
     },
     [theme.breakpoints.down('md')]: {
-        width: '45px',
-        height: '45px',
+        width: '70px',
+        height: '70px',
+        fontSize: '35px',
+        minWidth: '70px',
+        minHeight: '70px',
     },
     [theme.breakpoints.down('sm')]: {
-        width: '40px',
-        height: '40px',
+        width: '60px',
+        height: '60px',
+        fontSize: '30px',
+        minWidth: '60px',
+        minHeight: '60px',
     },
 }));
 
@@ -2149,23 +2165,23 @@ export const PodcastCarousel = ({ className }) => {
                 <NavigationContainer role="group" aria-label="Carousel navigation">
                     <NavButton
                         variant="outline"
-                        size="small"
+                        size="large"
                         onClick={handlePrevious}
                         aria-label="Previous podcast"
                         title="Go to previous podcast"
                         disabled={navigationLoading}
                     >
-                        ‹
+                        ❮
                     </NavButton>
                     <NavButton
                         variant="outline"
-                        size="small"
+                        size="large"
                         onClick={handleNext}
                         aria-label="Next podcast"
                         title="Go to next podcast"
                         disabled={navigationLoading}
                     >
-                        ›
+                        ❯
                     </NavButton>
                 </NavigationContainer>
             </CarouselContainer>
