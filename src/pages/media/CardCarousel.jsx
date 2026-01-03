@@ -318,7 +318,7 @@ export const CardCarousel = ({ className, autoRotate = true, rotationInterval = 
             {/* Navigation Buttons */}
             <Button
                 variant="outline"
-                size="small"
+                size="large"
                 onClick={prevSlide}
                 aria-label="Previous slide"
                 style={{
@@ -326,21 +326,44 @@ export const CardCarousel = ({ className, autoRotate = true, rotationInterval = 
                     top: '50%',
                     left: '20px',
                     transform: 'translateY(-50%)',
-                    width: '50px',
-                    height: '50px',
+                    width: '80px',
+                    height: '80px',
                     borderRadius: '50%',
-                    border: '2px solid rgba(255, 232, 161, 0.8)',
-                    backgroundColor: 'rgba(30, 45, 39, 0.8)',
+                    border: '3px solid rgba(255, 232, 161, 1)',
+                    backgroundColor: 'rgba(68, 122, 101, 0.95)',
                     color: 'rgba(255, 232, 161, 1)',
                     backdropFilter: 'blur(10px)',
+                    fontSize: '40px',
+                    fontWeight: 'bold',
+                    pointerEvents: 'auto',
+                    boxShadow: '0 4px 20px rgba(68, 122, 101, 0.6)',
+                    transition: 'all 0.3s ease',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '0',
+                    minWidth: '80px',
+                    minHeight: '80px',
                     zIndex: 10
                 }}
+                onMouseOver={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)';
+                    e.currentTarget.style.backgroundColor = 'rgba(255, 232, 161, 1)';
+                    e.currentTarget.style.color = 'rgba(30, 45, 39, 1)';
+                    e.currentTarget.style.boxShadow = '0 6px 30px rgba(255, 232, 161, 0.8)';
+                }}
+                onMouseOut={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-50%) scale(1)';
+                    e.currentTarget.style.backgroundColor = 'rgba(68, 122, 101, 0.95)';
+                    e.currentTarget.style.color = 'rgba(255, 232, 161, 1)';
+                    e.currentTarget.style.boxShadow = '0 4px 20px rgba(68, 122, 101, 0.6)';
+                }}
             >
-                ‹
+                ❮
             </Button>
             <Button
                 variant="outline"
-                size="small"
+                size="large"
                 onClick={nextSlide}
                 aria-label="Next slide"
                 style={{
@@ -348,17 +371,40 @@ export const CardCarousel = ({ className, autoRotate = true, rotationInterval = 
                     top: '50%',
                     right: '20px',
                     transform: 'translateY(-50%)',
-                    width: '50px',
-                    height: '50px',
+                    width: '80px',
+                    height: '80px',
                     borderRadius: '50%',
-                    border: '2px solid rgba(255, 232, 161, 0.8)',
-                    backgroundColor: 'rgba(30, 45, 39, 0.8)',
+                    border: '3px solid rgba(255, 232, 161, 1)',
+                    backgroundColor: 'rgba(68, 122, 101, 0.95)',
                     color: 'rgba(255, 232, 161, 1)',
                     backdropFilter: 'blur(10px)',
+                    fontSize: '40px',
+                    fontWeight: 'bold',
+                    pointerEvents: 'auto',
+                    boxShadow: '0 4px 20px rgba(68, 122, 101, 0.6)',
+                    transition: 'all 0.3s ease',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '0',
+                    minWidth: '80px',
+                    minHeight: '80px',
                     zIndex: 10
                 }}
+                onMouseOver={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)';
+                    e.currentTarget.style.backgroundColor = 'rgba(255, 232, 161, 1)';
+                    e.currentTarget.style.color = 'rgba(30, 45, 39, 1)';
+                    e.currentTarget.style.boxShadow = '0 6px 30px rgba(255, 232, 161, 0.8)';
+                }}
+                onMouseOut={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-50%) scale(1)';
+                    e.currentTarget.style.backgroundColor = 'rgba(68, 122, 101, 0.95)';
+                    e.currentTarget.style.color = 'rgba(255, 232, 161, 1)';
+                    e.currentTarget.style.boxShadow = '0 4px 20px rgba(68, 122, 101, 0.6)';
+                }}
             >
-                ›
+                ❯
             </Button>
 
             {/* 3D Carousel Stage */}
