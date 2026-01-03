@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { GoogleOAuthProvider } from '@react-oauth/google'
@@ -67,6 +67,20 @@ function App() {
     if (!googleClientId) {
         console.error('VITE_GOOGLE_CLIENT_ID environment variable is not set');
     }
+    
+    // Disable right-click across the entire site
+    useEffect(() => {
+        const handleContextMenu = (e) => {
+            e.preventDefault();
+            return false;
+        };
+        
+        document.addEventListener('contextmenu', handleContextMenu);
+        
+        return () => {
+            document.removeEventListener('contextmenu', handleContextMenu);
+        };
+    }, []);
     
     return (
         <GoogleOAuthProvider clientId={googleClientId || ''}>
