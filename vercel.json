@@ -7,19 +7,19 @@
   "rewrites": [
     {
       "source": "/uploads/:path*",
-      "destination": "https://explorejungles.com/uploads/:path*"
+      "destination": "https://web-production-42741.up.railway.app/uploads/:path*"
     },
     {
       "source": "/images/:path*",
-      "destination": "https://explorejungles.com/uploads/images/:path*"
+      "destination": "https://web-production-42741.up.railway.app/uploads/images/:path*"
     },
     {
       "source": "/videos/:path*",
-      "destination": "https://explorejungles.com/uploads/videos/:path*"
+      "destination": "https://web-production-42741.up.railway.app/uploads/videos/:path*"
     },
     {
       "source": "/audio/:path*",
-      "destination": "https://explorejungles.com/uploads/audio/:path*"
+      "destination": "https://web-production-42741.up.railway.app/uploads/audio/:path*"
     },
     {
       "source": "/((?!api|uploads|images|videos|audio|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|manifest.json|assets|static).*)",
